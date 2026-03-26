@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Security Awareness</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Cyber Security Awareness</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="threats.html">Threats</a>
+<a href="tips.html">Safety Tips</a>
+<a href="quiz.html">Quiz</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Stay Safe Online 🔐</h2>
+<p>Learn how to protect yourself from cyber threats</p>
+</section>
+
+<section class="cards">
+<div class="card">
+<h3>Phishing</h3>
+<p>Fake websites to steal your data</p>
+</div>
+
+<div class="card">
+<h3>Malware</h3>
+<p>Harmful software that damages your system</p>
+</div>
+
+<div class="card">
+<h3>Ransomware</h3>
+<p>Locks your data and demands money</p>
+</div>
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Threats</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.details {
+display: none;
+background: white;
+color: black;
+padding: 20px;
+margin: 20px auto;
+width: 60%;
+border-radius: 10px;
+}
+
+.details img {
+width: 100%;
+border-radius: 10px;
+margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>⚠️ Cyber Threats</h1>
+
+<div class="container">
+
+<div class="card" onclick="showDetails('phishing')">
+<h2>🎣 Phishing</h2>
+<p>Click to learn</p>
+</div>
+
+<div class="card" onclick="showDetails('malware')">
+<h2>💻 Malware</h2>
+<p>Click to learn</p>
+</div>
+
+<div class="card" onclick="showDetails('ransomware')">
+<h2>🔒 Ransomware</h2>
+<p>Click to learn</p>
+</div>
+
+</div>
+
+<!-- DETAILS SECTION -->
+
+<div id="phishing" class="details">
+<h2>🎣 Phishing Attack</h2>
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+<p>Phishing is a cyber attack where fake emails or websites trick users into giving personal information.</p>
+<p><b>Example:</b> “Your bank account is blocked. Click here.”</p>
+<p><b>Tip:</b> Always check URL before entering details.</p>
+</div>
+
+<div id="malware" class="details">
+<h2>💻 Malware</h2>
+<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+<p>Malware is harmful software that damages your system.</p>
+<p><b>Example:</b> Installing unknown apps.</p>
+<p><b>Tip:</b> Use antivirus software.</p>
+</div>
+
+<div id="ransomware" class="details">
+<h2>🔒 Ransomware</h2>
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
+<p>Ransomware locks your files and asks for money.</p>
+<p><b>Example:</b> “Pay ₹5000 to unlock data.”</p>
+<p><b>Tip:</b> Keep backups.</p>
+</div>
+
+<script>
+function showDetails(id) {
+
+let all = document.querySelectorAll('.details');
+all.forEach(div => div.style.display = 'none');
+
+document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Safety Tips</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Safety Tips 🔐</h1>
+
+<ul class="tips">
+<li>Use strong passwords</li>
+<li>Enable 2-factor authentication</li>
+<li>Avoid clicking unknown links</li>
+<li>Update software regularly</li>
+<li>Use antivirus protection</li>
+</ul>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Cyber Security Quiz</h1>
+
+<form id="quizForm">
+
+<div class="question">
+<p>1. What is phishing?</p>
+<input type="radio" name="q1" value="a"> Fake website<br>
+<input type="radio" name="q1" value="b"> Antivirus<br>
+</div>
+
+<div class="question">
+<p>2. Strong password should contain?</p>
+<input type="radio" name="q2" value="a"> Only letters<br>
+<input type="radio" name="q2" value="b"> Letters, numbers, symbols<br>
+</div>
+
+<div class="question">
+<p>3. Malware is?</p>
+<input type="radio" name="q3" value="a"> Safe software<br>
+<input type="radio" name="q3" value="b"> Harmful software<br>
+</div>
+
+<div class="question">
+<p>4. HTTPS means?</p>
+<input type="radio" name="q4" value="a"> Secure connection<br>
+<input type="radio" name="q4" value="b"> Virus<br>
+</div>
+
+<button type="button" onclick="submitQuiz()">Submit</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+function submitQuiz() {
+let score = 0;
+
+if(document.querySelector('input[name="q1"]:checked')?.value=="a") score++;
+if(document.querySelector('input[name="q2"]:checked')?.value=="b") score++;
+if(document.querySelector('input[name="q3"]:checked')?.value=="b") score++;
+if(document.querySelector('input[name="q4"]:checked')?.value=="a") score++;
+
+document.getElementById("result").innerHTML = "Your Score: " + score + "/4";
+}
+</script>
+
+</body>
+</html>
+body {
+font-family: Arial;
+margin: 0;
+background: linear-gradient(to right, #1e3c72, #2a5298);
+color: white;
+text-align: center;
+}
+
+header {
+background: rgba(0,0,0,0.5);
+padding: 15px;
+}
+
+nav a {
+color: white;
+margin: 10px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.hero {
+padding: 50px;
+}
+
+.cards, .container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.card {
+background: white;
+color: black;
+padding: 20px;
+border-radius: 10px;
+width: 200px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: scale(1.1);
+}
+
+.tips {
+list-style: none;
+padding: 0;
+}
+
+.tips li {
+background: white;
+color: black;
+margin: 10px;
+padding: 10px;
+border-radius: 5px;
+}
+
+button {
+padding: 10px 20px;
+border: none;
+background: #00c6ff;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background: #0072ff;
+}
